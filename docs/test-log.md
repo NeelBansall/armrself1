@@ -1,6 +1,6 @@
 # Automated WebXR Test Log
 
-**Test Date:** 2026-10-07T18:02:25.661Z  
+**Test Date:** 2026-10-07T18:33:16.871Z  
 **Environment:** Headless Chromium (win32) with WebGL emulation & Fake MediaStream  
 **Server Target:** `http://localhost:8085`
 
@@ -22,11 +22,11 @@
 [Test] Starting Chromium Headless Test Suite with WebGL & Fake Camera flags...
 
 ▶ [Test 1] Testing Desktop 3D Preview Mode (http://localhost:8085/?preview=1&debug=1)...
-✔ Canvas Mounted: false
+✔ Canvas Mounted: true
 ✔ Triangles in GPU Render Info: 11,138
 
 ▶ [Test 2] Testing Marker Target Modal Display...
-✔ Marker Modal Opened: false
+✔ Marker Modal Opened: true
 ✔ Marker Modal Closed: true
 
 ▶ [Test 3] Testing Metrics Export Functionality...

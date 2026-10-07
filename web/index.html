@@ -6,11 +6,17 @@
   <title>Cross-Platform WebXR & Mobile 3D Optimization</title>
   <link rel="stylesheet" href="./styles.css">
   
-  <!-- Vendor Libraries (100% Offline / Local - Zero CDN dependency) -->
-  <script src="./libs/three.min.js"></script>
-  <script src="./libs/loaders/GLTFLoader.js"></script>
-  <script src="./libs/loaders/DRACOLoader.js"></script>
-  <script src="./libs/controls/OrbitControls.js"></script>
+  <!-- Importmap for bare specifier resolution (100% Offline / Local) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./libs/three.module.js",
+      "three/addons/": "./libs/"
+    }
+  }
+  </script>
+
+  <!-- MindAR Image Tracking Engine -->
   <script src="./libs/mindar-image-three.prod.js"></script>
 </head>
 <body>
@@ -135,7 +141,7 @@
     </div>
   </div>
 
-  <!-- Application Logic -->
+  <!-- Application Logic (ES Module) -->
   <script type="module" src="./main.js"></script>
 </body>
 </html>
