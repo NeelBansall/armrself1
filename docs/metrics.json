@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-07T18:00:02.225Z",
+  "before": {
+    "filePath": "highpoly.glb",
+    "fileSizeBytes": 15809272,
+    "fileSizeKB": 15438.74,
+    "fileSizeMB": 15.077,
+    "triangles": 560916,
+    "vertices": 283658,
+    "primitives": 1,
+    "materialsCount": 1,
+    "texturesCount": 0,
+    "drawCalls": 1,
+    "avgDecodeTimeMs": 65.95,
+    "hasDraco": false,
+    "validation": {
+      "valid": false,
+      "errors": 1,
+      "warnings": 0,
+      "infos": 1
+    }
+  },
+  "after": {
+    "filePath": "model_optimized.glb",
+    "fileSizeBytes": 39328,
+    "fileSizeKB": 38.41,
+    "fileSizeMB": 0.038,
+    "triangles": 11138,
+    "vertices": 6596,
+    "primitives": 1,
+    "materialsCount": 1,
+    "texturesCount": 0,
+    "drawCalls": 1,
+    "avgDecodeTimeMs": 18.79,
+    "hasDraco": true,
+    "validation": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    }
+  },
+  "improvements": {
+    "triangleReductionPercent": 98.01,
+    "vertexReductionPercent": 97.67,
+    "fileSizeReductionPercent": 99.75,
+    "compressionRatio": "402.0:1"
+  }
+}

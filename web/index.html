@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cross-Platform WebXR & Mobile 3D Optimization</title>
+  <link rel="stylesheet" href="./styles.css">
+  
+  <!-- Vendor Libraries (100% Offline / Local - Zero CDN dependency) -->
+  <script src="./libs/three.min.js"></script>
+  <script src="./libs/loaders/GLTFLoader.js"></script>
+  <script src="./libs/loaders/DRACOLoader.js"></script>
+  <script src="./libs/controls/OrbitControls.js"></script>
+  <script src="./libs/mindar-image-three.prod.js"></script>
+</head>
+<body>
+
+  <!-- AR Three.js Viewport Container -->
+  <div id="ar-container"></div>
+
+  <!-- UI Overlay Layer -->
+  <div id="ui-layer">
+    <!-- Header Bar -->
+    <header class="navbar interactive">
+      <div class="brand-title">
+        <span>AR/MR WebXR</span>
+        <span class="brand-badge">Draco 3D</span>
+      </div>
+      <div class="nav-buttons">
+        <button id="btn-marker" class="btn-icon" title="View or Print Marker">
+          🎯 Marker
+        </button>
+        <button id="btn-mode-toggle" class="btn-icon" title="Toggle 3D Orbit / AR Camera">
+          🔄 3D Preview
+        </button>
+        <button id="btn-debug-toggle" class="btn-icon" title="Toggle Metrics Overlay">
+          📊 Stats
+        </button>
+      </div>
+    </header>
+
+    <!-- Tracking Status Pill -->
+    <div id="tracking-badge" class="tracking-badge">
+      <div id="status-dot" class="status-dot"></div>
+      <span id="tracking-status-text">INITIALIZING</span>
+    </div>
+
+    <!-- Bottom Guidance Banner -->
+    <div id="guidance-card" class="guidance-card interactive">
+      <div class="guidance-text">
+        <strong id="guidance-title">Target Tracking Active</strong>
+        <p id="guidance-desc" style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">
+          Aim camera directly at the AR target marker. Drag to rotate 3D relic.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real-Time Metrics & FPS Debug Overlay -->
+  <div id="debug-overlay" class="interactive">
+    <div class="debug-title">
+      <span>DEVICE BENCHMARK</span>
+      <span id="dbg-fps" style="color: #4ade80;">60 FPS</span>
+    </div>
+    <div class="debug-row">
+      <span>Frame Time:</span>
+      <span id="dbg-frametime" class="debug-val">16.6 ms</span>
+    </div>
+    <div class="debug-row">
+      <span>Triangles (GPU):</span>
+      <span id="dbg-triangles" class="debug-val">11,138</span>
+    </div>
+    <div class="debug-row">
+      <span>Draw Calls:</span>
+      <span id="dbg-drawcalls" class="debug-val">1</span>
+    </div>
+    <div class="debug-row">
+      <span>Tracking State:</span>
+      <span id="dbg-tracking" class="debug-val">SEARCHING</span>
+    </div>
+    <div class="debug-row">
+      <span>Device Pixel Ratio:</span>
+      <span id="dbg-dpr" class="debug-val">1.00</span>
+    </div>
+    <div class="debug-row">
+      <span>JS Heap Memory:</span>
+      <span id="dbg-memory" class="debug-val">N/A</span>
+    </div>
+    <div class="debug-row">
+      <span>Asset Payload:</span>
+      <span class="debug-val" style="color: #4ade80;">38.4 KB (Draco)</span>
+    </div>
+    <button id="btn-export-stats" class="btn-export">Export Stats (JSON / CSV)</button>
+  </div>
+
+  <!-- Splash Screen / Camera Permission Prompt -->
+  <div id="splash-overlay" class="splash-overlay">
+    <div class="splash-card">
+      <div class="splash-icon">📱✨</div>
+      <h1 class="splash-title">WebXR AR Experience</h1>
+      <p class="splash-subtitle">
+        Draco-compressed, real-time 3D asset optimization pipeline running directly inside the mobile browser.
+      </p>
+
+      <button id="btn-start-ar" class="btn-primary">
+        🚀 Launch AR Camera
+      </button>
+      <button id="btn-start-preview" class="btn-secondary">
+        🔍 Launch Desktop 3D Preview
+      </button>
+
+      <div id="progress-container" class="progress-container">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div id="progress-text" class="progress-text"></div>
+    </div>
+  </div>
+
+  <!-- Marker Display & Download Modal -->
+  <div id="marker-modal" class="modal-backdrop hidden">
+    <div class="modal-content">
+      <h3 style="font-size: 17px; margin-bottom: 6px;">AR Target Marker</h3>
+      <p style="font-size: 12px; color: var(--text-secondary);">
+        Display this marker on another screen or print it on paper.
+      </p>
+      <img id="marker-img" src="./assets/target.png" alt="AR Target Marker" class="modal-image">
+      <div style="display: flex; gap: 10px; margin-top: 14px;">
+        <a href="./assets/target.png" download="ar_marker_target.png" class="btn-primary" style="text-decoration:none; display:inline-block; padding:10px; font-size:13px;">
+          ⬇ Download Marker
+        </a>
+        <button id="btn-close-modal" class="btn-secondary" style="margin-top:0; padding:10px; font-size:13px;">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

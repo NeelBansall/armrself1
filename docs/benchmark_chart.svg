@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" style="background:#0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <style>
+    .title { fill: #f8fafc; font-size: 20px; font-weight: 700; }
+    .subtitle { fill: #94a3b8; font-size: 13px; }
+    .label { fill: #cbd5e1; font-size: 13px; font-weight: 600; }
+    .val-before { fill: #f87171; font-size: 12px; font-weight: 700; }
+    .val-after { fill: #4ade80; font-size: 12px; font-weight: 700; }
+    .bar-bg { fill: #1e293b; rx: 6px; }
+    .bar-before { fill: url(#gradBefore); rx: 6px; }
+    .bar-after { fill: url(#gradAfter); rx: 6px; }
+    .legend-text { fill: #e2e8f0; font-size: 13px; }
+  </style>
+  <defs>
+    <linearGradient id="gradBefore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#f87171" />
+    </linearGradient>
+    <linearGradient id="gradAfter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#4ade80" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title Section -->
+  <text x="40" y="45" class="title">Mobile 3D Asset Optimization Pipeline Benchmark</text>
+  <text x="40" y="68" class="subtitle">Decimation &amp; Draco Mesh Compression Performance Comparison</text>
+
+  <!-- Legend -->
+  <rect x="520" y="32" width="16" height="16" rx="4" fill="#ef4444" />
+  <text x="545" y="45" class="legend-text">Before (5,60,916 tris / 15.077 MB)</text>
+  <rect x="520" y="56" width="16" height="16" rx="4" fill="#22c55e" />
+  <text x="545" y="69" class="legend-text">After (11,138 tris / 38.41 KB)</text>
+
+  <!-- Metric 1: Triangle Count -->
+  <text x="40" y="125" class="label">Polygon / Triangle Count</text>
+  <rect x="40" y="135" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="135" width="700" height="24" class="bar-before" />
+  <text x="705" y="152" class="val-before" text-anchor="end">5,60,916 tris</text>
+
+  <rect x="40" y="165" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="165" width="18" height="24" class="bar-after" />
+  <text x="90" y="182" class="val-after">11,138 tris (-98.01%)</text>
+
+  <!-- Metric 2: Vertex Count -->
+  <text x="40" y="230" class="label">Vertex Count</text>
+  <rect x="40" y="240" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="240" width="700" height="24" class="bar-before" />
+  <text x="705" y="257" class="val-before" text-anchor="end">2,83,658 verts</text>
+
+  <rect x="40" y="270" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="270" width="18" height="24" class="bar-after" />
+  <text x="90" y="287" class="val-after">6,596 verts (-97.67%)</text>
+
+  <!-- Metric 3: File Size -->
+  <text x="40" y="335" class="label">Payload / File Size</text>
+  <rect x="40" y="345" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="345" width="700" height="24" class="bar-before" />
+  <text x="705" y="362" class="val-before" text-anchor="end">15.077 MB</text>
+
+  <rect x="40" y="375" width="720" height="24" class="bar-bg" />
+  <rect x="40" y="375" width="18" height="24" class="bar-after" />
+  <text x="90" y="392" class="val-after">38.41 KB (-99.75%)</text>
+
+  <!-- Summary Card -->
+  <rect x="40" y="420" width="720" height="42" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="380" y="446" fill="#38bdf8" font-size="13" font-weight="600" text-anchor="middle">
+    🚀 Summary: 402.0:1 compression ratio | 18.79ms decode time | 100% Khronos glTF Validated
+  </text>
+</svg>
