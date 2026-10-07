@@ -10,6 +10,7 @@
     "compile:marker": "node scripts/compile_marker.mjs",
     "build:report": "node scripts/generate_report_docs.mjs",
     "serve": "npx serve web -l 8080",
+    "deploy": "node scripts/deploy_ghpages.mjs",
     "test:e2e": "node scripts/test_e2e.mjs"
   },
   "dependencies": {
