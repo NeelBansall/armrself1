@@ -14,7 +14,7 @@ This document outlines the standard operating procedure for validating the WebXR
    - Open mobile browser (**Safari on iOS**, **Chrome on Android**).
    - Navigate to the deployed GitHub Pages URL:
      ```
-     https://<username>.github.io/ar-demo-project/?debug=1
+     https://NeelBansall.github.io/armrself1/?debug=1
      ```
    - *(Optional local testing)*: If testing locally over Wi-Fi, run `npm run serve` on your computer, ensure both devices are on the same subnet, and navigate to `https://<local-ip>:8080/?debug=1`.
 

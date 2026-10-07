@@ -1,7 +1,7 @@
 # Cross-Platform WebXR Implementation & Mobile 3D Asset Optimization Pipeline
 
 **Course:** Augmented Reality & Mixed Reality (B.Tech Sem V, AI & ML) — **Course Outcomes:** CO1, CO2  
-**Student Details:** `[YOUR NAME / ROLL NO / BATCH]` | **Date:** October 2026 | **Repository:** `ar-demo-project`
+**Student Details:** Neel Bansal (`[ROLL NO / BATCH]`) | **Date:** October 2026 | **Repository:** `https://github.com/NeelBansall/armrself1` | **Live Demo:** `https://NeelBansall.github.io/armrself1/`
 
 ---
 

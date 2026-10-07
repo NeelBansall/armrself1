@@ -7,15 +7,15 @@
 
 > **Academic Context:** Mini-Project for *Augmented Reality & Mixed Reality* (B.Tech Semester V, AI & ML).  
 > **Course Outcomes Addressed:** **CO1** (Comparative Study of Native vs. Web AR Architectures) & **CO2** (Real-Time 3D Asset Optimization, Decimation & Draco Quantization).  
-> **Student Name & Roll No:** `[YOUR NAME / ROLL NO / BATCH]`
+> **Student Name & Roll No:** Neel Bansal (`[ROLL NO / BATCH]`)
 
 ---
 
 ## 🌟 Live Demo & Deployment
 
-- **Live GitHub Pages URL:** `https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>/`
-- **Desktop 3D Inspector Mode:** `https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>/?preview=1`
-- **Real-Time Telemetry HUD:** `https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>/?debug=1`
+- **Live GitHub Pages URL:** `https://NeelBansall.github.io/armrself1/`
+- **Desktop 3D Inspector Mode:** `https://NeelBansall.github.io/armrself1/?preview=1`
+- **Real-Time Telemetry HUD:** `https://NeelBansall.github.io/armrself1/?debug=1`
 
 ---
 
@@ -146,7 +146,7 @@ npm run build:report
 
 1. Navigate to the deployed URL with `?debug=1`:
    ```
-   https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>/?debug=1
+   https://NeelBansall.github.io/armrself1/?debug=1
    ```
 2. Tap **"🚀 Launch AR Camera"** and grant camera permissions.
 3. Aim your phone at the [Target Marker](#-target-tracking-marker).
@@ -172,7 +172,7 @@ git commit -m "feat: complete WebXR AR project with Draco asset pipeline and tec
 git branch -M main
 
 # 3. Add your remote GitHub repository URL
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<REPO_NAME>.git
+git remote add origin https://github.com/NeelBansall/armrself1.git
 
 # 4. Push to GitHub
 git push -u origin main
